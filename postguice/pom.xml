@@ -66,12 +66,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.gwizard</groupId>
-			<artifactId>gwizard-hibernate</artifactId>
-			<version>0.9-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
 			<groupId>com.googlecode.gentyref</groupId>
 			<artifactId>gentyref</artifactId>
 			<version>1.2.0</version>

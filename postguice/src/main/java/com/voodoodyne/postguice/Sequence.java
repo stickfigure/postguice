@@ -2,7 +2,6 @@ package com.voodoodyne.postguice;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.gwizard.hibernate.EM;
 import org.hibernate.Session;
 
 import javax.inject.Singleton;
