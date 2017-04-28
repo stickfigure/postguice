@@ -1,4 +1,4 @@
-package com.voodoodyne.postguice;
+package com.voodoodyne.postguice.usertype;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 
