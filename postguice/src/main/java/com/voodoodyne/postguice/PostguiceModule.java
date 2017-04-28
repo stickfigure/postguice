@@ -33,5 +33,6 @@ public class PostguiceModule extends AbstractModule {
 		install(Modules.override(new JpaPersistModule(persistenceUnitName)).with(new WizardBridgeModule()));
 
 		requestStaticInjection(EM.class);
+		requestStaticInjection(Transactions.class);
 	}
 }
