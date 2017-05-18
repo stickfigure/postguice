@@ -8,7 +8,7 @@ import org.junit.jupiter.api.extension.ExtensionContext.Store;
 /**
  * Creates a template database with the latest migrations
  */
-public class FlywayMigrator implements BeforeAllCallback{
+public class FlywayMigrator implements BeforeAllCallback {
 	@Override
 	public void beforeAll(final ContainerExtensionContext context) throws Exception {
 		final Store store = context.getStore();

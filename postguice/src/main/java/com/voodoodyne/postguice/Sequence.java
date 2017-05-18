@@ -32,7 +32,7 @@ public class Sequence {
 
 	@SneakyThrows
 	private void addBatch() {
-		final String query = "select nextval('" + name + "') from generate_series(1," + batchSize + ")";
+		final String query = "select nextval('" + name + "') from generate_series(1, " + batchSize + ")";
 
 		final Session session = EM.em().unwrap(Session.class);
 		session.doWork(connection -> {
