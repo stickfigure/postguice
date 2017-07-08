@@ -10,5 +10,6 @@ import java.sql.Types;
 public class PostguicePostgreSQL96Dialect extends PostgreSQL95Dialect {
 	public PostguicePostgreSQL96Dialect() {
 		this.registerColumnType(Types.JAVA_OBJECT, "jsonb");
+		this.registerFunction("fts", new SimpleFullTextSearchFunction());
 	}
 }
