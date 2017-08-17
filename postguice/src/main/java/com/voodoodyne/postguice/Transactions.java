@@ -57,4 +57,22 @@ public class Transactions {
 			return null;
 		});
 	}
+
+	/**
+	 * This is like transact(), but enforces the start of a new transaction. Since we can't actually suspend
+	 * a transaction and start a new one, we simply detect and throw an exception if we are already in a txn.
+	 */
+	public static <R> R transactNew(final Callable<R> work) {
+		checkNotInTransaction();
+		return transact(work);
+	}
+
+	/**
+	 * This is like transact(), but enforces the start of a new transaction. Since we can't actually suspend
+	 * a transaction and start a new one, we simply detect and throw an exception if we are already in a txn.
+	 */
+	public static void transactNew(final Runnable work) {
+		checkNotInTransaction();
+		transact(work);
+	}
 }
