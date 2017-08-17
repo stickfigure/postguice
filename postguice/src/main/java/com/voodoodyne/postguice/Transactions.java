@@ -33,6 +33,13 @@ public class Transactions {
 	}
 
 	/**
+	 * @throws IllegalStateException if we are currently in a transaction
+	 */
+	public static void checkNotInTransaction() {
+		Preconditions.checkState(!EM.em().getTransaction().isActive(), "Expected NOT to be in a transaction");
+	}
+
+	/**
 	 * Execute the work in a transaction. This is functionally identical to putting the work in a method
 	 * and annotating it with @Transactional.
 	 */
