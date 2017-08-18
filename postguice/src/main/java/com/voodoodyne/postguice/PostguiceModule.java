@@ -2,7 +2,7 @@ package com.voodoodyne.postguice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.persist.jpa.JpaPersistModule;
-import com.google.inject.persist.jpa.WizardBridgeModule;
+import com.google.inject.persist.jpa.PostguiceBridgeModule;
 import com.google.inject.util.Modules;
 import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +30,7 @@ public class PostguiceModule extends AbstractModule {
 
 	@Override
 	protected void configure() {
-		install(Modules.override(new JpaPersistModule(persistenceUnitName)).with(new WizardBridgeModule()));
+		install(Modules.override(new JpaPersistModule(persistenceUnitName)).with(new PostguiceBridgeModule()));
 
 		requestStaticInjection(EM.class);
 		requestStaticInjection(Transactions.class);

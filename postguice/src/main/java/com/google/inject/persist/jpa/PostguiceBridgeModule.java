@@ -20,7 +20,7 @@ import static org.hibernate.cfg.AvailableSettings.USER;
  *
  * Note that this module needs to override the JpaPersistModule.
  */
-public class WizardBridgeModule extends AbstractModule {
+public class PostguiceBridgeModule extends AbstractModule {
 	@Override
 	protected void configure() {
 	}
