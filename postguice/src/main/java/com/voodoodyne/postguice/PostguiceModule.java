@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
  * See the gwizard-example application for a demonstration.</p>
  */
 @RequiredArgsConstructor
-@EqualsAndHashCode(callSuper=false, of={})	// makes installation of this module idempotent
+@EqualsAndHashCode(callSuper=false)	// makes installation of this module idempotent
 public class PostguiceModule extends AbstractModule {
 
 	private final String persistenceUnitName;
