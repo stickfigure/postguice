@@ -26,17 +26,24 @@ public class Transactions {
 	private static TransactionAdaptor adaptor;
 
 	/**
+	 * @return true if we're in a transaction
+	 */
+	public static boolean inTransaction() {
+		return EM.em().getTransaction().isActive();
+	}
+
+	/**
 	 * @throws IllegalStateException if we are not currently in a transaction
 	 */
 	public static void checkInTransaction() {
-		Preconditions.checkState(EM.em().getTransaction().isActive(), "Expected to be in a transaction");
+		Preconditions.checkState(inTransaction(), "Expected to be in a transaction");
 	}
 
 	/**
 	 * @throws IllegalStateException if we are currently in a transaction
 	 */
 	public static void checkNotInTransaction() {
-		Preconditions.checkState(!EM.em().getTransaction().isActive(), "Expected NOT to be in a transaction");
+		Preconditions.checkState(!inTransaction(), "Expected NOT to be in a transaction");
 	}
 
 	/**
