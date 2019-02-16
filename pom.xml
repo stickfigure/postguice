@@ -3,7 +3,7 @@
 
 	<groupId>com.voodoodyne.postguice</groupId>
 	<artifactId>postguice-parent</artifactId>
-	<version>0.10-SNAPSHOT</version>
+	<version>0.10</version>
 	<packaging>pom</packaging>
 
 	<name>Postguice</name>
@@ -31,7 +31,7 @@
     <scm>
         <url>scm:git:https://github.com/stickfigure/postguice</url>
         <developerConnection>scm:git:git@github.com:stickfigure/postguice</developerConnection>
-		<tag>HEAD</tag>
+		<tag>postguice-0.10</tag>
 	</scm>
 
 	<licenses>
