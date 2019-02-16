@@ -15,10 +15,10 @@
 	</modules>
 
 	<properties>
-		<guice.version>4.1.0</guice.version>
-		<hibernate.version>5.2.10.Final</hibernate.version>
-		<jackson.version>2.8.8</jackson.version>
-		<junit.jupiter.version>5.0.0-M4</junit.jupiter.version>
+		<guice.version>4.2.2</guice.version>
+		<hibernate.version>5.4.1.Final</hibernate.version>
+		<jackson.version>2.9.8</jackson.version>
+		<junit.jupiter.version>5.4.0</junit.jupiter.version>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -144,7 +144,7 @@
 					<dependency>
 						<groupId>org.junit.platform</groupId>
 						<artifactId>junit-platform-surefire-provider</artifactId>
-						<version>1.0.0-M3</version>
+						<version>1.0.0</version>
 					</dependency>
 					<dependency>
 						<groupId>org.junit.jupiter</groupId>
@@ -182,7 +182,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.16.14</version>
+			<version>1.18.2</version>
 			<scope>provided</scope> <!-- only needs to be present for compile -->
 		</dependency>
 
