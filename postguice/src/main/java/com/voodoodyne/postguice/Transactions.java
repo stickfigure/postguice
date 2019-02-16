@@ -15,7 +15,7 @@ import java.util.concurrent.Callable;
 public class Transactions {
 
 	static class TransactionAdaptor {
-		@Transactional
+		@Transactional(rollbackOn = Exception.class)
 		@SneakyThrows
 		public <R> R transact(final Callable<R> work) {
 			return work.call();
