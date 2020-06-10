@@ -1,6 +1,6 @@
 .svn
-/target/
-/test-output/
+target
+test-output
 .idea
 *.iml
 .classpath
