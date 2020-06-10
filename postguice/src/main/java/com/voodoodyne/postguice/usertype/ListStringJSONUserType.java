@@ -7,8 +7,8 @@ import java.util.List;
 /**
  * UserType which lets us store JsonNode in hibernate, converting to JSON natively.
  */
-public class ListStringUserType extends JSONUserType<List<String>> {
-	public ListStringUserType() {
+public class ListStringJSONUserType extends JSONUserType<List<String>> {
+	public ListStringJSONUserType() {
 		super(new TypeReference<List<String>>(){});
 	}
 }
